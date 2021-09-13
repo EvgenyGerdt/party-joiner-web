@@ -62,6 +62,7 @@ export default {
   computed: {
     ...mapGetters('auth', [
         'loading',
+        'user',
     ]),
 
     hasLoading() {
@@ -86,6 +87,8 @@ export default {
       this.login({
         username: this.username,
         password: this.password,
+      }).then(() => {
+        this.$router.push({name: 'Profile', params: {id: this.user._id}});
       });
     },
   },

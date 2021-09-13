@@ -61,17 +61,17 @@ const actions = {
 };
 
 const mutations = {
-    LOGIN_REQUEST(state) {
+    [LOGIN_REQUEST](state) {
       state.loading = true;
     },
-    LOGIN_SUCCESS(state, {data}) {
+    [LOGIN_SUCCESS](state, data) {
         state.user = data;
         state.isAuthenticated = true;
         state.loading = false;
 
         state.error = '';
     },
-    LOGIN_ERROR(state, {error}) {
+    [LOGIN_ERROR](state, {error}) {
         state.user = {};
         state.isAuthenticated = false;
         state.loading = false;
@@ -79,22 +79,22 @@ const mutations = {
         state.error = error;
     },
 
-    REGISTER_REQUEST(state) {
+    [REGISTER_REQUEST](state) {
         state.loading = true;
     },
-    REGISTER_SUCCESS(state, {data}) {
+    [REGISTER_SUCCESS](state, {data}) {
         state.user = data;
         state.isAuthenticated = true;
         state.loading = false;
 
         state.error = '';
     },
-    REGISTER_ERROR(state, {error}) {
+    [REGISTER_ERROR](state, {error}) {
         state.user = {};
         state.isAuthenticated = false;
         state.loading = false;
 
-        state.error = '';
+        state.error = error;
     }
 };
 

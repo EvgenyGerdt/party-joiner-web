@@ -75,38 +75,38 @@ const actions = {
 };
 
 const mutations = {
-    SEND_CODE_REQUEST(state) {
+    [SEND_CODE_REQUEST](state) {
       state.loading = true;
     },
-    SEND_CODE_SUCCESS(state) {
+    [SEND_CODE_SUCCESS](state) {
       state.loading = false;
       state.isSent = true;
     },
-    SEND_CODE_ERROR(state) {
+    [SEND_CODE_ERROR](state) {
         state.loading = false;
         state.isSent = false;
     },
 
-    CHECK_CODE_REQUEST(state) {
+    [CHECK_CODE_REQUEST](state) {
         state.loading = true;
     },
-    CHECK_CODE_SUCCESS(state) {
+    [CHECK_CODE_SUCCESS](state) {
         state.loading = false;
         state.isChecked = true;
     },
-    CHECK_CODE_ERROR(state) {
+    [CHECK_CODE_ERROR](state) {
         state.loading = false;
         state.isChecked = false;
     },
 
-    CHANGE_PASSWORD_REQUEST(state) {
+    [CHANGE_PASSWORD_REQUEST](state) {
         state.loading = true;
     },
-    CHANGE_PASSWORD_SUCCESS(state) {
+    [CHANGE_PASSWORD_SUCCESS](state) {
         state.loading = false;
         state.isChanged = true;
     },
-    CHANGE_PASSWORD_ERROR(state) {
+    [CHANGE_PASSWORD_ERROR](state) {
         state.loading = false;
         state.isChanged = false;
     },

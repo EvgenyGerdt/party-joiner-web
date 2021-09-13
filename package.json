@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "@vuelidate/core": "^2.0.0-alpha.25",
@@ -20,7 +21,8 @@
     "path": "^0.12.7",
     "vue": "^3.2.6",
     "vue-router": "^4.0.11",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.6.1",
